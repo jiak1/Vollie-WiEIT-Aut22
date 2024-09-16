@@ -288,7 +288,11 @@ const ShiftPage = ({ shiftType }: ShiftPageProps) => {
                                     )}
 
                                     {shiftType === "searchShifts" && (
-                                        <button id="whiteButton" className={"admin-btn"} onClick={handleFilterPanel}>
+                                        <button
+                                            id="whiteButton"
+                                            className={`admin-btn ${filterPanelVisible ? "highlighted" : ""}`}
+                                            onClick={handleFilterPanel}
+                                        >
                                             <img className="btn-icon" src={filterIcon} />
                                             {"Filters"}
                                         </button>
